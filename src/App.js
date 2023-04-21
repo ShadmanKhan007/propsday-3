@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Invitation from "./components/Invitation/Invitation.jsx"
 function App() {
+
+  let obj = {
+    Subject : "Birthday party Invitation",
+    To : "jaGdish@gmail.com",
+    name : "jaGdish", 
+    events :"birthday party",
+    some_names : [ "Ritu ," , "Saurabh ," , "Kartik ,"],
+    addres : "Green field Avenue ",
+    from : "JaGdish"
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Invitation data={obj} />
     </div>
   );
 }
